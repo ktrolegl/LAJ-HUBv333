@@ -1,52 +1,11 @@
--- Da Hood/Da Strike Ultimate GUI
--- Created with DrRay UI Library
+-- Da Hood/Da Strike Basic GUI
+-- Simple version that should work on Roblox Delta
 
--- Load DrRay UI Library with error handling
-local success, DrRayLibrary = pcall(function()
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-end)
-
-if not success then
-    warn("Failed to load DrRay UI Library: ", DrRayLibrary)
-    return
-end
+-- Load DrRay UI Library with error handling - direct version
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 -- Create main window
-local window = DrRayLibrary:Load("Da Hood Ultimate", "Default")
-
--- SCRIPTS TAB
-local scriptsTab = window:Tab("Main Scripts", "")
-
--- Popular Da Hood scripts section
-scriptsTab:Button("Psalms", "Classic popular script", function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/NewWhitelistService/l/refs/heads/main/psalms%20old.lua"))()
-    end)
-end)
-
-scriptsTab:Button("Azure Mobile", "Mobile-friendly version", function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigma-3131/Scripts/main/Azure%20Mobile"))()
-    end)
-end)
-
-scriptsTab:Button("Frostbyte", "Feature-rich script", function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Totocoems/Frostbyte-/main/Frostbyte%20leak", true))()
-    end)
-end)
-
-scriptsTab:Button("Ballware", "Popular alternative", function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DHBCommunity/DHBOfficialScript/main/FinallyV4"))()
-    end)
-end)
-
-scriptsTab:Button("Swagmode", "Classic Da Hood script", function()
-    pcall(function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
-    end)
-end)
+local window = DrRayLibrary:Load("Da Hood Basic", "Default")
 
 -- COMBAT TAB
 local combatTab = window:Tab("Combat", "")
@@ -431,3 +390,4 @@ end)
 
 -- Print success message
 print("Da Hood/Da Strike Ultimate GUI loaded successfully!")
+
